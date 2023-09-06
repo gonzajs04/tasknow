@@ -3,7 +3,12 @@ import Header from '../components/Header'
 import Ventajas from '../components/Ventajas'
 import Uso from '../components/Uso'
 import Separator from '../components/Separator'
+import {useState} from 'react';
+
 export default function Index() {
+
+
+
   return (
     <div className='index'>
       <Header/>

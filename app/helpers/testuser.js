@@ -1,9 +1,7 @@
-export const users = [
-    {
-        email: "test",
-        pass:"123"
 
-    }
-]
-    
+export const addUser = (newUser)=>{
+
+      return  Object.keys(newUser)>0 && users.push(newUser);
+
+}
 

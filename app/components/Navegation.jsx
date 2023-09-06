@@ -12,7 +12,7 @@ export default function Navegation() {
           <a href="">Uso</a>
           <a href="">Contacto</a>
           <Link to='/registrar'>Registro</Link>
-          <Link to='/registrar'>Crea tu primer tarea</Link>
+          <Link to='/tareas'>Crea tu primer tarea</Link>
         </div>
         <div className="user">
           <div className="user-photo">

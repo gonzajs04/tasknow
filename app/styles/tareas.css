@@ -1,0 +1,45 @@
+.tareas{
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+     .left-panel{
+        background-color: var(--lightBlue);
+        height: 80dvh;
+        .links{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            .routesTasks{
+                margin: .5rem 0;
+                font-size: .9rem;
+                color: white;
+                font-weight: 900;
+                text-decoration: none;
+                text-transform: uppercase;
+            }
+        }
+    }
+  
+}
+
+.header-task
+{
+    padding: 1.5rem 0;
+    background-color: var(--lightViolet);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    margin: 2rem auto;
+    color: white;
+  
+}
+.header-task p{
+    margin: 0 4rem;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
+

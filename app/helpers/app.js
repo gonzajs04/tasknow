@@ -16,8 +16,7 @@ export const getPresentDate = ()=>{
 }
 
 export const validateDataSpaces = (inputVal)=>{
-
-    const vals = inputVal.split(' ');
-    const word = vals.join('');
-    return word;
+    const vals = inputVal.split(' ') ///QUITA ESPACIOS Y ME CONVIERTE LAS PALABRAS EN ARRAY SEPARADOS POR ESOS ESPACIOS, POR EJ: HOLA ME LLAMO: ["HOLA", "ME", "LLAMO"]
+    const word = vals.join(''); //ME UNE EL ARAY Y SIN NECESIDAD DE COMAS "HOLAMELLAMO"
+    return word; //RETORNAMOS LA PALABRA
 }

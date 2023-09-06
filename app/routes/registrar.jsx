@@ -7,6 +7,7 @@ import { useEffect, useState } from "react"
 import Swal from 'sweetalert2';
 import { regex,regexPassword } from "../helpers/app.js";
 import { Form, useActionData } from "@remix-run/react";
+import {addUser} from '../helpers/testuser';
 //////////////////////////////////////////////////FIN IMPORTS
 
 export const meta = () => {
@@ -44,20 +45,38 @@ export async function action({ request, params }) {
 ////////////////////////////////INICIO DE COMPONENTE REGISTRAR
 export default function registrar() {
   const [registroExitoso,setRegistroExitoso] = useState(false);
-  const[user,setUser] = useState({})
-  const[name,setName] = useState('')
-  const[surname,setSurName] = useState('')
-  const[email,setEmail] = useState('')
+  const[user,setUser] = useState({});
+  const[name,setName] = useState('');
+  const[surname,setSurName] = useState('');
+  const[email,setEmail] = useState('');
+  const [password,setPassword] = useState('');
   const errores = useActionData();
+
+
 
   useEffect(()=>{
     if(errores?.length ===0){
-      setRegistroExitoso(); 
+      setRegistroExitoso(true); 
     }
   },[errores]);
 
   useEffect(() => {
     registroExitoso && mostrarAlerta();
+
+       /*  setUser({
+          name,
+          surname,
+          email,
+          password
+        }); SE USARA PARA INGRESAR UN NUEVO USUARIO*/
+
+        setName('');
+        setSurName('');
+        setEmail('');
+        setPassword('');
+ 
+
+
   },[registroExitoso]);
 
 
@@ -69,9 +88,10 @@ export default function registrar() {
       });
   }
 
+  console.log(user)
   return (
-    <section className="registrar">
    
+    <section className="registrar">
       <div className="container-left">
         <div className="container-registrar-text">
           <div className="text-register">
@@ -100,6 +120,8 @@ export default function registrar() {
                 setSurName= {setSurName}
                 email={email}
                 setEmail={setEmail}
+                password={password}
+                setPassword={setPassword}
             />
             <input className="btn-enviar" type="submit" value="Enviar" />
           </Form>

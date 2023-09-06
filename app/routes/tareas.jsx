@@ -23,6 +23,8 @@ export default function tareas(){
  
     return(
         <div className="tareas">
+       
+
            <LeftPanel/>
           
             <RightPanel/>

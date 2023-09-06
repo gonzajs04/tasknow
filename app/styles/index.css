@@ -356,10 +356,6 @@ box-shadow: 0px 0px 5px 0px rgba(209,209,209,1);
 }
 
 
-
-/*PASAR A HOJAS DE ESTILO INDIVIDUALES TODAS LAS ESTILIZACIONES CORESPONDIENTES A LAS SECCIONES*/
-
-
 /*ERROR*/
 
 .container-error{
@@ -377,11 +373,6 @@ align-items: center;
   color: white;
 }
 
-
-
-
-
-
 /*FOOTER*/
 .footer{
   padding: 2rem 0;
@@ -390,7 +381,12 @@ align-items: center;
 }
 .copy{
   font-weight: 800;
+  text-align: center;
 }
+
+/*PASAR A HOJAS DE ESTILO INDIVIDUALES TODAS LAS ESTILIZACIONES CORESPONDIENTES A LAS SECCIONES*/
+
+
 /*NORMALIZE*/
 
 

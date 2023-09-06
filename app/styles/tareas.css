@@ -1,22 +1,46 @@
 .tareas{
     display: grid;
-    grid-template-columns: .5fr 2fr;
+   grid-template-rows: .1fr 2fr;
+    transition: .5s all ease-in-out;
+    @media(width>=1366px){
+        font-size: 1.2rem;
+        grid-template-columns: .5fr 2fr;
+        grid-template-rows: auto;
+    }   
+    
+    height: 100dvh;
      .left-panel{
+        height: 100%;
         background-color: var(--lightBlue);
-        height: 80dvh;
+        @media(width>=1366px){
+            height: 100%;
+        }   
         .links{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             height: 100%;
+            @media(width>=1366px){
+                height: 100%;
+                flex-direction: column;
+
+            }   
+      
             .routesTasks{
-                margin: .5rem 0;
+                margin:  0 1rem;
+                
                 font-size: .9rem;
                 color: white;
                 font-weight: 900;
+                text-align: center;
                 text-decoration: none;
                 text-transform: uppercase;
+                @media(width>=1366px){
+                        font-size: 1.2rem;
+                        margin: 0.7rem 0;
+                       
+                }
             }
         }
     }
@@ -31,15 +55,74 @@
     align-items: center;
     justify-content: center;
     max-width: 90%;
+    height: 100%;
     margin: 2rem auto;
     color: white;
   
 }
 .header-task p{
-    margin: 0 4rem;
+    margin: 0 3.5rem;
     font-size: .9rem;
     font-weight: 600;
 }
 
 
 
+.form label{
+    display: block;
+    margin: .5rem 0;
+}
+.container-right-panel{
+    padding: 5rem 0;
+}
+
+.crear-tarea{
+    padding: 0rem 0;
+    display: grid;
+    grid-template-rows: .5fr 1fr;
+
+    place-items: center;
+    max-width: 80%;
+    width: 100%;
+    margin: 0 auto;
+    @media(width>1366px){
+        padding: 5rem 0;
+        grid-template-rows: auto;
+
+        
+    }
+    .form{
+        width: 100%;
+        display: grid;
+        row-gap: 1rem;
+        height: 100%;
+    }
+    .form input{
+        width: 100%;
+        padding: .5rem .5rem;
+        font-size: .9rem;
+        border-radius: 20px;
+        border: 1px rgb(191, 191, 191) solid;
+        outline: none;
+        &:hover{
+            cursor: pointer;
+            transition: border .5s ease-in-out;
+            border: 1.5px solid var(--lightBlue);
+            outline: none;
+        }
+    }
+    .form textarea{
+        font-size: .9rem;
+        width: 100%;
+        border-radius: 20px;
+        padding: .5rem .5rem;
+        border: 1px rgb(191, 191, 191) solid;
+        outline: none;
+        &:hover{
+            cursor: pointer;
+            transition: border .5s ease-in-out;
+            border: 1.5px solid var(--lightBlue);
+            outline: none;
+        }
+    }
+}

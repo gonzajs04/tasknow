@@ -44,32 +44,30 @@ export async function action({ request, params }) {
 ////////////////////////////////INICIO DE COMPONENTE REGISTRAR
 export default function registrar() {
   const [registroExitoso,setRegistroExitoso] = useState(false);
+  const[user,setUser] = useState({})
   const[name,setName] = useState('')
   const[surname,setSurName] = useState('')
   const[email,setEmail] = useState('')
   const errores = useActionData();
 
   useEffect(()=>{
-    setRegistroExitoso(errores?.length===0);
+    if(errores?.length ===0){
+      setRegistroExitoso(); 
+    }
   },[errores]);
 
   useEffect(() => {
-   if(registroExitoso){
-      mostrarAlerta();
-   }
-},[registroExitoso]);
+    registroExitoso && mostrarAlerta();
+  },[registroExitoso]);
 
 
   function mostrarAlerta(){
-  
       Swal.fire({
           icon:"success",
           title:"Registro",
           text:"Registrado Satisfactoriamente"
       });
   }
-
- 
 
   return (
     <section className="registrar">

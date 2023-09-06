@@ -14,3 +14,10 @@ export const getPresentDate = ()=>{
     const now = date.getFullYear();
     return now;
 }
+
+export const validateDataSpaces = (inputVal)=>{
+
+    const vals = inputVal.split(' ');
+    const word = vals.join('');
+    return word;
+}

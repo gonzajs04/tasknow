@@ -3,6 +3,7 @@ import pen from '../../public/img/penimg.png'
 export default function Card({ventaja}){
     return(
         <div className="card">
+           <p>Hola mundo</p>
             <div className="img-pen">
                     <picture>
                         <img loading="lazy" src={pen} alt="imagen pen" />

@@ -1,14 +1,15 @@
 .tareas{
     display: grid;
-   grid-template-rows: .1fr 2fr;
+    grid-template-rows: auto;
     transition: .5s all ease-in-out;
-    @media(width>=1366px){
+
+    @media(width>=1366px){    height: 100dvh;
+
         font-size: 1.2rem;
         grid-template-columns: .5fr 2fr;
-        grid-template-rows: auto;
+       
     }   
     
-    height: 100dvh;
      .left-panel{
         height: 100%;
         background-color: var(--lightBlue);
@@ -79,7 +80,7 @@
 }
 
 .crear-tarea{
-    padding: 0rem 0;
+    padding: 3rem 0;
     display: grid;
     grid-template-rows: .5fr 1fr;
 

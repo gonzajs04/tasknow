@@ -12,6 +12,7 @@
      .left-panel{
         height: 100%;
         background-color: var(--lightBlue);
+        padding: 1rem 0;
         @media(width>=1366px){
             height: 100%;
         }   
@@ -49,9 +50,10 @@
 
 .header-task
 {
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     background-color: var(--lightViolet);
     display: flex;
+    border-radius: 30px;
     align-items: center;
     justify-content: center;
     max-width: 90%;

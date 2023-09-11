@@ -1,7 +1,6 @@
 import { Form } from "@remix-run/react";
-import { useState } from "react";
 import styled from "styled-components";
-const Select = styled.select`
+export const Select = styled.select`
   width: 100%;
   color: black;
   border-radius: 15px;

@@ -1,29 +1,26 @@
-:root{
-    --white: #FFFF;
-    --greenLight: #0abf53; 
-    --green: #34bf49;
-    --lightBlue: #00a4e4;
-    --darkBlue: #2eb0d1;
-    --violet: #a51890;
-    --lightViolet: #ae52ab;
-    --red:#ff4c4c;
-    
+:root {
+  --white: #ffff;
+  --greenLight: #0abf53;
+  --green: #34bf49;
+  --lightBlue: #00a4e4;
+  --darkBlue: #2eb0d1;
+  --violet: #a51890;
+  --lightViolet: #ae52ab;
+  --red: #ff4c4c;
 }
 
-body{
-    height: 100dvh;
-    font-family: 'Inter Variable', sans-serif;
-
+body {
+  height: 100dvh;
+  font-family: "Inter Variable", sans-serif;
 }
-img{
-    display: block;
-    width: 100%;
+img {
+  display: block;
+  width: 100%;
 }
 
 .index {
   overflow: hidden;
 }
-
 /*NAVEGACION*/
 
 .containerg-nav {
@@ -35,36 +32,99 @@ img{
   -moz-box-shadow: 0px 0px 18px -3px rgba(222, 222, 222, 1);
   box-shadow: 0px 0px 18px -3px rgba(222, 222, 222, 1);
 }
-.container-nav{
-    display: flex;
+.container-nav {
+  background-color: white;
+  transform: translateY(-100%);
+  position: fixed;
+  transition: transform .5s ease-in-out;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  @media (width>=1024px) {
+    transform: translateY(0%);
+    position: relative;
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
+    height: 100%;
     max-width: 80%;
-    margin: 0 auto;
+  }
 }
 
-.container-logo h2{
-          /** TEXT GRADIENT */ color: #0a0a0a; background-image: -webkit-linear-gradient(90deg, #0a0a0a 9%, #262626 50%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-    font-weight: 800;
-    font-size: 1.5rem;
+.container-menu {
+  position: fixed;
+  top: 1.3%;
+  right: 50%;
+  z-index: 100;
+  display: block;
+  width: 24px;
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (width>=1024px) {
+    display: none;
+  }
 }
-.nav a{
-    text-decoration: none;
-    color: black;
-    margin: 0 1.3rem;
-    font-weight: 700;
+.isOpen {
+  transform: translateY(0%);
+}
+.container-logo h2 {
+  /** TEXT GRADIENT */
+  color: #0a0a0a;
+  background-image: -webkit-linear-gradient(90deg, #0a0a0a 9%, #262626 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (width>=1024px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+.nav a {
+  text-decoration: none;
+  color: black;
+  margin: .4rem 1.3rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  @media (width: 1024px) {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  @media (width: 1368px) {
+    font-size: 1rem;
+  }
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  img {
+    font-size: 0.8rem;
+  }
 }
-.user p{
-    color: black;
+.user p {
+  color: black;
+  font-size: 0.9rem;
+
+  @media (width: 1368px) {
     font-size: 1.2rem;
-   
+  }
 }
 
 /*HEADER*/
@@ -75,59 +135,56 @@ img{
   position: relative;
   overflow: hidden;
 }
-.title-text{
+.title-text {
   position: relative;
   text-align: center;
-  @media(width>=768px){
-          
+  @media (width>=768px) {
     text-align: left;
   }
 }
-.title-text h1{
-      margin: 0;
-      font-weight: 800;
-          /** TEXT GRADIENT */ color: #52e81c; background-image: -webkit-linear-gradient(315deg, #52e81c 0%, #2eb0d1 37%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-          font-size: 3rem;
-          @media(width>=768px){
-          
-            font-size: 4rem;
-          }
+.title-text h1 {
+  margin: 0;
+  font-weight: 800;
+  /** TEXT GRADIENT */
+  color: #52e81c;
+  background-image: -webkit-linear-gradient(315deg, #52e81c 0%, #2eb0d1 37%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  @media (width>=768px) {
+    font-size: 4rem;
+  }
 
-          @media(width>=1024px){
-          
-            font-size: 6rem;
-          }
+  @media (width>=1024px) {
+    font-size: 6rem;
+  }
 
-          @media(width>=1378px){
-        
-            font-size: 8rem;
-          }
-            
+  @media (width>=1378px) {
+    font-size: 8rem;
+  }
 }
-.title-text p{
+.title-text p {
   max-width: 100%;
 
-  @media(width>=768px){
-          
+  @media (width>=768px) {
     max-width: 65%;
   }
 
   color: rgb(29, 29, 29);
   font-weight: 300;
-  font-size: .9rem;
+  font-size: 0.9rem;
 
-
-  @media(width>=768px){
-          
+  @media (width>=768px) {
     font-size: 0.8rem;
   }
 
-  @media(width>=1024px){
-  
+  @media (width>=1024px) {
     font-size: 0.9rem;
   }
 
-  @media(width>=1378px){
+  @media (width>=1378px) {
     font-size: 1.1rem;
   }
 }
@@ -135,20 +192,19 @@ img{
 .container-data {
   max-width: 80%;
   margin: 0 auto;
- display: flex;
- flex-direction: column;
- align-items: center;
-justify-content: space-between;
-  @media(width>=768px){
-      align-items: left;
-   flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @media (width>=768px) {
+    align-items: left;
+    flex-direction: row;
   }
 }
 
-
-.container-data .container-img{
+.container-data .container-img {
   width: 300px;
-  @media(width>=768px){
+  @media (width>=768px) {
     width: 600px;
   }
 }
@@ -162,14 +218,12 @@ justify-content: space-between;
   left: 0;
   width: 400px;
   height: 400px;
-  @media(width>=768px){
+  @media (width>=768px) {
     top: 120%;
     left: -15%;
     width: 400px;
     height: 400px;
   }
-
- 
 }
 
 /*VENTAJAS*/
@@ -178,46 +232,51 @@ justify-content: space-between;
   overflow: hidden;
   padding: 8rem 0;
 }
-.ventajas .title-text{
+.ventajas .title-text {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: right;
   justify-content: center;
 }
-.ventajas .title-text p{
+.ventajas .title-text p {
   font-weight: 800;
   text-transform: uppercase;
   color: #3a3a3a;
   font-size: 0.8rem;
 }
-.container-ventajas{
+.container-ventajas {
   display: flex;
   flex-direction: column;
   gap: 8rem;
 }
-.container-ventajas .container-card{
+.container-ventajas .container-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 5rem 0;
 }
-.card{
+.card {
   transform: scale(1.2);
   margin: 3rem 4rem;
   padding: 3rem 2rem;
 }
-.card:nth-child(2){
+.card:nth-child(2) {
   transform: scale(1.4);
 }
-.ventajas .title-text h2{
+.ventajas .title-text h2 {
   max-width: 60%;
   margin: 0;
-          /** TEXT GRADIENT */ color: #22f0d4; background-image: -webkit-linear-gradient(315deg, #22f0d4 27%, #e97feb 67%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-          
-        font-size: 5.5rem;
-    
+  /** TEXT GRADIENT */
+  color: #22f0d4;
+  background-image: -webkit-linear-gradient(315deg, #22f0d4 27%, #e97feb 67%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  font-size: 5.5rem;
 }
 
 .card {
@@ -227,16 +286,16 @@ justify-content: space-between;
   -moz-box-shadow: 0px 0px 5px 0px rgba(209, 209, 209, 1);
   box-shadow: 0px 0px 5px 0px rgba(209, 209, 209, 1);
 }
-.img-card{
+.img-card {
   width: 200px;
 }
-.card-title{
+.card-title {
   text-align: center;
   font-size: 1.2rem;
   color: #262626;
   font-weight: 900;
 }
-.img-pen{
+.img-pen {
   width: 96px;
   position: absolute;
   top: -10%;
@@ -249,75 +308,75 @@ justify-content: space-between;
   padding: 8rem 0;
   background-color: whitesmoke;
 }
-.container-uso{
+.container-uso {
   display: grid;
-  @media(width>1261px){
+  @media (width>1261px) {
     grid-template-columns: 2fr 1fr;
   }
- 
 }
 
-
-.container-uso-text{
+.container-uso-text {
   color: white;
   display: grid;
   place-items: center;
   text-align: center;
-  @media(width>=1261px){
+  @media (width>=1261px) {
     display: grid;
     place-items: flex-start;
     text-align: left;
   }
 }
-.container-uso-text p{
+.container-uso-text p {
   font-weight: 800;
   text-transform: uppercase;
   color: #3a3a3a;
   font-size: 0.8rem;
 }
-.container-uso-text h2{
+.container-uso-text h2 {
   font-size: 3rem;
   margin: 0 0.8rem 0 0;
   text-transform: capitalize;
-          /** TEXT GRADIENT */ color: #22cde0; background-image: -webkit-linear-gradient(315deg, #22cde0 11%, #f175ff 100%); background-clip: text; -webkit-background-clip: text; text-fill-color: transparent; -webkit-text-fill-color: transparent;
-          
-          @media(width>=768px){
-            font-size: 4rem;
-          }
-          @media(width>=1261px){
-            font-size: 5.5rem;
-          }
-     
+  /** TEXT GRADIENT */
+  color: #22cde0;
+  background-image: -webkit-linear-gradient(315deg, #22cde0 11%, #f175ff 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  @media (width>=768px) {
+    font-size: 4rem;
+  }
+  @media (width>=1261px) {
+    font-size: 5.5rem;
+  }
 }
 
 .container-video {
   max-width: 80%;
 }
-.container-video video{
+.container-video video {
   width: 100%;
 }
-.paso{
+.paso {
   display: grid;
   place-items: center;
-
-  
 }
-.paso span{
-  color: var(--darkBlue)
+.paso span {
+  color: var(--darkBlue);
 }
-@media(width>1261px){
-  .paso{
+@media (width>1261px) {
+  .paso {
     display: grid;
     place-items: flex-start;
   }
 }
 
-.paso p{
-  font-size: .9rem;
-  @media(width>=768px){
+.paso p {
+  font-size: 0.9rem;
+  @media (width>=768px) {
     font-size: 1.5rem;
   }
-
   text-transform: uppercase;
   color: #262626;
   font-weight: 700;
@@ -327,12 +386,10 @@ justify-content: space-between;
   width: auto;
   max-width: 80%;
   min-height: auto;
- 
 }
 
-@media(width>=768){
-  .paso .container-img
-  {
+@media (width>=768) {
+  .paso .container-img {
     width: auto;
     max-width: 80%;
     min-height: 300px;
@@ -352,7 +409,7 @@ justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }
-.container-error p{
+.container-error p {
   background-color: var(--red);
   padding: 1rem 1rem;
   font-weight: 800;
@@ -368,7 +425,7 @@ justify-content: space-between;
   background-color: var(--greenLight);
   color: var(--white);
 }
-.copy{
+.copy {
   font-weight: 800;
   text-align: center;
 }
@@ -387,12 +444,12 @@ justify-content: space-between;
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
- html {
-    line-height: 1.15; /* 1 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-  }
-  
-  /* Sections
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
      ========================================================================== */
 
 /**
@@ -428,24 +485,24 @@ h1 {
    * 1. Add the correct box sizing in Firefox.
    * 2. Show the overflow in Edge and IE.
    */
-  
-  hr {
-    box-sizing: content-box; /* 1 */
-    height: 0; /* 1 */
-    overflow: visible; /* 2 */
-  }
-  
-  /**
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
    * 1. Correct the inheritance and scaling of font size in all browsers.
    * 2. Correct the odd `em` font sizing in all browsers.
    */
-  
-  pre {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  
-  /* Text-level semantics
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
      ========================================================================== */
 
 /**
@@ -460,14 +517,14 @@ a {
    * 1. Remove the bottom border in Chrome 57-
    * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
    */
-  
-  abbr[title] {
-    border-bottom: none; /* 1 */
-    text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
-  }
-  
-  /**
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
    * Add the correct font weight in Chrome, Edge, and Safari.
    */
 
@@ -480,15 +537,15 @@ strong {
    * 1. Correct the inheritance and scaling of font size in all browsers.
    * 2. Correct the odd `em` font sizing in all browsers.
    */
-  
-  code,
-  kbd,
-  samp {
-    font-family: monospace, monospace; /* 1 */
-    font-size: 1em; /* 2 */
-  }
-  
-  /**
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
    * Add the correct font size in all browsers.
    */
 
@@ -535,19 +592,19 @@ img {
    * 1. Change the font styles in all browsers.
    * 2. Remove the margin in Firefox and Safari.
    */
-  
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
-  }
-  
-  /**
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
    * Show the overflow in IE.
    * 1. Show the overflow in Edge.
    */
@@ -617,17 +674,17 @@ fieldset {
    * 3. Remove the padding so developers are not caught out when they zero out
    *    `fieldset` elements in all browsers.
    */
-  
-  legend {
-    box-sizing: border-box; /* 1 */
-    color: inherit; /* 2 */
-    display: table; /* 1 */
-    max-width: 100%; /* 1 */
-    padding: 0; /* 3 */
-    white-space: normal; /* 1 */
-  }
-  
-  /**
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
    * Add the correct vertical alignment in Chrome, Firefox, and Opera.
    */
 
@@ -647,14 +704,14 @@ textarea {
    * 1. Add the correct box sizing in IE 10.
    * 2. Remove the padding in IE 10.
    */
-  
-  [type="checkbox"],
-  [type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-  }
-  
-  /**
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
@@ -667,13 +724,13 @@ textarea {
    * 1. Correct the odd appearance in Chrome and Safari.
    * 2. Correct the outline style in Safari.
    */
-  
-  [type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-  }
-  
-  /**
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
    * Remove the inner padding in Chrome and Safari on macOS.
    */
 
@@ -685,13 +742,13 @@ textarea {
    * 1. Correct the inability to style clickable types in iOS and Safari.
    * 2. Change font properties to `inherit` in Safari.
    */
-  
-  ::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
-  }
-  
-  /* Interactive
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
      ========================================================================== */
 
 /*
@@ -729,41 +786,41 @@ template {
   display: none;
 }
 
-  /*SEPARATOR*/
+/*SEPARATOR*/
 
+.container {
+  position: relative;
+  background: whitesmoke;
+  height: 50vh;
+}
 
-  .container {
-    position: relative;
-    background: whitesmoke;
-    height: 50vh;
-  }
-  
-  .wave {
-    position: absolute;
-    height: 130px;
-    width: 100%;
-    background: whitesmoke;
-    bottom: 0;
-  }
-  
-  .wave::before, .wave::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 50% 100%;
-  }
-  
-  .wave::before {
-    width: 55%;
-    height: 100%;
-    background-color: whitesmoke;
-    right: -1.5%;
-    top: 40%;
-  }
-  .wave::after {
-    width: 55%;
-    height: 109%;
-    background-color: #fff;
-    left: -1.5%;
-    top: 60%;
-  }
+.wave {
+  position: absolute;
+  height: 130px;
+  width: 100%;
+  background: whitesmoke;
+  bottom: 0;
+}
+
+.wave::before,
+.wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50% 100%;
+}
+
+.wave::before {
+  width: 55%;
+  height: 100%;
+  background-color: whitesmoke;
+  right: -1.5%;
+  top: 40%;
+}
+.wave::after {
+  width: 55%;
+  height: 109%;
+  background-color: #fff;
+  left: -1.5%;
+  top: 60%;
+}

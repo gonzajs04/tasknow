@@ -31,13 +31,12 @@
       
             .routesTasks{
                 margin:  0 1rem;
-                
                 font-size: .9rem;
                 color: white;
                 font-weight: 900;
                 text-align: center;
                 text-decoration: none;
-                text-transform: uppercase;
+                text-transform: capitalize;
                 @media(width>=1366px){
                         font-size: 1.2rem;
                         margin: 0.7rem 0;

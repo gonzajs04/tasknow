@@ -1,20 +1,22 @@
 .tareas{
     overflow: hidden;
     display: grid;
-   grid-template-rows: .1fr 2fr;
+    grid-template-rows: auto;
     transition: .5s all ease-in-out;
-    @media(width>=1366px){
+
+    @media(width>=1366px){    height: 100dvh;
+
         font-size: 1.2rem;
         grid-template-columns: .5fr 2fr;
-        grid-template-rows: auto;
+       
     }   
     
-    height: 100dvh;
      .left-panel{
         transform: translateX(-80%);
         transition: transform .5s ease-in-out;
         height: 100%;
         background-color: var(--lightBlue);
+        padding: 1rem 0;
         @media(width>=1366px){
             height: 100%;
         }   
@@ -35,7 +37,6 @@
       
             .routesTasks{
                 margin:  0 1rem;
-                
                 font-size: .9rem;
                 color: white;
                 font-weight: 900;
@@ -55,9 +56,10 @@
 
 .header-task
 {
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     background-color: var(--lightViolet);
     display: flex;
+    border-radius: 30px;
     align-items: center;
     justify-content: center;
     max-width: 90%;
@@ -83,7 +85,7 @@
 }
 
 .crear-tarea{
-    padding: 0rem 0;
+    padding: 3rem 0;
     display: grid;
     grid-template-rows: .5fr 1fr;
 

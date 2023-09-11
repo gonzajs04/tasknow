@@ -1,5 +1,6 @@
 import LeftPanel from '../components/LeftPanel';
 import styles from '../styles/tareas.css';
+import Calendar from 'react-calendar';
 import FormTarea from '../components/FormTarea'
 import { useLoaderData } from '@remix-run/react';
 
